@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<block>
+  <name>Plot</name>
+  <key>Plot</key>
+  <category>Plots</category>
+  <import>import gnuradio.Plot</import>
+  <make>gnuradio.Plot.Plot($sampleinterval,$timewindow,$num_plot)</make>
+
+<param>
+   <name>sampleinterval</name>
+   <key>sampleinterval</key>
+   <value>1</value>
+   <type>real</type>
+
+</param>
+
+<param>
+   <name>Number of Plot</name>
+   <key>num_plot</key>
+   <value>1</value>
+   <type>real</type>
+
+</param>
+
+
+<param>
+   <name>timewindow</name>
+   <key>timewindow</key>
+   <value>1</value>
+   <type>real</type>
+
+</param>
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <nports>$num_plot</nports>
+  </sink>
+
+<!--
+  <sink>
+  <name>in1</name>
+  <type>float</type>
+  <nports>4</nports>
+  </sink> 
+
+ 
+  <source>
+    <name>in</name>
+    <type>float</type>
+  </source>-->
+</block>
